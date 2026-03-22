@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mock EMR System</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .container { max-width: 600px; margin: auto; border: 1px solid #ccc; padding: 20px; border-radius: 8px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; }
+        input, textarea { width: 95%; padding: 8px; }
+        button { padding: 10px 15px; cursor: pointer; }
+        #login-status { color: red; }
+        #submission-status { color: green; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>EMR Login</h2>
+        <div id="login-form">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password">
+            </div>
+            <button onclick="login()">Login</button>
+            <p id="login-status"></p>
+        </div>
+
+        <div id="data-entry" style="display:none;">
+            <h2>Enter New Patient Note</h2>
+            <div class="form-group">
+                <label for="patient-name">Patient Name</label>
+                <input type="text" id="patient-name">
+            </div>
+            <!-- --- NEW FIELD ADDED HERE --- -->
+            <div class="form-group">
+                <label for="dob">Date of Birth (YYYY-MM-DD)</label>
+                <input type="text" id="dob">
+            </div>
+            <div class="form-group">
+                <label for="note">Note</label>
+                <textarea id="note" rows="5"></textarea>
+            </div>
+            <button onclick="submitNote()">Submit Note</button>
+            <p id="submission-status"></p>
+        </div>
+    </div>
+    <script>
+        function login() {
+            if (document.getElementById('username').value === 'doctor' && document.getElementById('password').value === 'password') {
+                document.getElementById('login-form').style.display = 'none';
+                document.getElementById('data-entry').style.display = 'block';
+            } else {
+                document.getElementById('login-status').textContent = 'Invalid credentials!';
+            }
+        }
+        function submitNote() {
+            const patientName = document.getElementById('patient-name').value;
+            // --- UPDATED SCRIPT TO GET DOB VALUE ---
+            const dob = document.getElementById('dob').value;
+            const note = document.getElementById('note').value;
+            // --- UPDATED LOGIC TO CHECK ALL FIELDS ---
+            if (patientName && dob && note) {
+                document.getElementById('submission-status').textContent = `Note for ${patientName} (DOB: ${dob}) submitted successfully!`;
+            } else {
+                document.getElementById('submission-status').textContent = 'Please fill out all fields.';
+            }
+        }
+    </script>
+</body>
+</html>

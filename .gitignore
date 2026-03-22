@@ -1,0 +1,16 @@
+# Virtual Environment
+venv/
+
+# Secret API keys
+.env
+
+# Database file (we'll start fresh on the server)
+healthcare.db
+
+# Large cache files and datasets
+vector_store_cache/
+datasets/
+
+# Python cache
+__pycache__/
+*.pyc

@@ -1,0 +1,64 @@
+Patient: John Doe
+Date: 2023-10-26
+Note: Patient complains of persistent cough and fever. Prescribed amoxicillin.
+
+---
+
+Patient: Jane Smith
+Date: 2023-10-27
+Note: Follow-up on hypertension. Blood pressure is stable. Continue with current medication.
+
+---
+
+Patient: Sarah Tancredi
+Date: 2024-05-10
+Note: Diagnosed with metastatic TN breast cancer to the bones and pleura. Recommended pleural drainage and chemotherapy with Eribulin or XELODA.
+
+---
+
+Patient: Michael Chen
+Date: 2024-08-15
+Note: Annual check-up. All vitals are normal. Patient is advised to continue with regular exercise. Blood work results are pending.
+
+---
+
+Patient: Emily Carter
+Date: 2024-09-01
+Note: Patient presented with symptoms of a common cold. Advised rest and hydration. No prescription necessary at this time.
+
+---
+Patient: Michael Chen
+DOB: 1985-02-10
+Date: 2026-02-06
+Note: Patient reports no new issues.
+
+---
+
+
+---
+
+Patient: Robert Paulson
+DOB: UNKNOWN
+Date: 2026-03-16
+Note: Patient is improving.
+
+---
+
+Patient: Robert Paulson
+DOB: UNKNOWN
+Date: 2026-03-16
+Note: Patient is improving.
+
+---
+
+Patient: MP
+DOB: 21-01-2000
+Date: 2026-03-18
+Note: ill
+
+---
+
+Patient: New Patient
+DOB: 2001-07-25
+Date: 2026-03-18
+Note: Patient has a sore throat.
