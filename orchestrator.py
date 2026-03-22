@@ -47,7 +47,7 @@ class Orchestrator:
         self.data_agent = get_data_agent()
         self.scheduling_agent = get_scheduling_agent()
         # --- TEMPORARILY DISABLE THE QA AGENT ---
-        # self.clinical_qa_agent = get_clinical_qa_agent()
+        self.clinical_qa_agent = get_clinical_qa_agent()
 
         prompt_template = """
         You are a helpful assistant who decides which tool to use.
@@ -145,8 +145,8 @@ class Orchestrator:
             except Exception as e:
                 return "Could not parse request. Please use format: 'get appointments for [Patient Name]'"
 
-        # elif "Clinical QA Agent" in chosen_tool:
-        #     return self.clinical_qa_agent.answer(user_query)
+        elif "Clinical QA Agent" in chosen_tool:
+            return self.clinical_qa_agent.answer(user_query)
 
         else:
             return f"I'm not sure how to handle that. The LLM suggested '{chosen_tool}'. Please rephrase your query."
